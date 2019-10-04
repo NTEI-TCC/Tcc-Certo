@@ -12,10 +12,10 @@ namespace Pages.UI.elegant_admin_lite_master.html
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                    litTeste.Text = @"Seja bem-vindo, prof! Esperamos que esta se torne na sua casa por muitos anos
-                e que encontre em todos nós uma segunda família. Certamente viveremos grandes momentos e todos juntos iremos
-                alcançar muito sucesso.Suas qualidades e capacidades vão acrescentar muitos pontos positivos ao grupo e sei que
-                iremos aprender muito com você também.É com muita alegria e de braços abertos que hoje recebemos você!";
+                    litTeste.Text = @"Seja bem-vindo, torcedor! Cheque os eventos e chaveamentos de sua escola para se
+                    certificar de que está a par dos jogos para oferecer uma torcida fervorosa a sua
+                    equipe. Desejamos um ótimo desempenho à sua escola!";
+                   
                     
         }
     }
