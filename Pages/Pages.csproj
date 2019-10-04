@@ -416,7 +416,10 @@
     <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sticky-kit-master\dist\sticky-kit.js" />
     <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sticky-kit-master\dist\sticky-kit.min.js" />
     <Content Include="UI\elegant-admin-lite-master\html\Avisos.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\AvisosAdm.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\CadastroAdm.aspx" />
     <Content Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\ChaveamentoAdm.aspx" />
     <Content Include="UI\elegant-admin-lite-master\html\Config.aspx" />
     <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\breadcrumb-page.css" />
     <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\dashboard1.css" />
@@ -433,7 +436,9 @@
     <Content Include="UI\elegant-admin-lite-master\html\dist\js\sidebarmenu.js" />
     <Content Include="UI\elegant-admin-lite-master\html\dist\js\waves.js" />
     <Content Include="UI\elegant-admin-lite-master\html\Eventos.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\EventosAdm.aspx" />
     <Content Include="UI\elegant-admin-lite-master\html\Home.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\HomeAdm.aspx" />
     <Content Include="UI\elegant-admin-lite-master\html\IMG\1.jpg" />
     <Content Include="UI\elegant-admin-lite-master\html\IMG\2.jpg" />
     <Content Include="UI\elegant-admin-lite-master\html\IMG\3.jpg" />
@@ -471,12 +476,33 @@
     <Compile Include="UI\elegant-admin-lite-master\html\Avisos.aspx.designer.cs">
       <DependentUpon>Avisos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\AvisosAdm.aspx.cs">
+      <DependentUpon>AvisosAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\AvisosAdm.aspx.designer.cs">
+      <DependentUpon>AvisosAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\CadastroAdm.aspx.cs">
+      <DependentUpon>CadastroAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\CadastroAdm.aspx.designer.cs">
+      <DependentUpon>CadastroAdm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx.cs">
       <DependentUpon>Chaveamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx.designer.cs">
       <DependentUpon>Chaveamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\ChaveamentoAdm.aspx.cs">
+      <DependentUpon>ChaveamentoAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\ChaveamentoAdm.aspx.designer.cs">
+      <DependentUpon>ChaveamentoAdm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Config.aspx.cs">
       <DependentUpon>Config.aspx</DependentUpon>
@@ -492,12 +518,26 @@
     <Compile Include="UI\elegant-admin-lite-master\html\Eventos.aspx.designer.cs">
       <DependentUpon>Eventos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\EventosAdm.aspx.cs">
+      <DependentUpon>EventosAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\EventosAdm.aspx.designer.cs">
+      <DependentUpon>EventosAdm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\HomeAdm.aspx.cs">
+      <DependentUpon>HomeAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\HomeAdm.aspx.designer.cs">
+      <DependentUpon>HomeAdm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\elegant-admin-lite-master\html\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
