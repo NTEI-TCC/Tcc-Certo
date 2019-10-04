@@ -1,0 +1,920 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B64E334A-4FAB-4914-823E-87B46711B281}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pages</RootNamespace>
+    <AssemblyName>Pages</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\css\font-awesome.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont.svg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\HELP-US-OUT.txt" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\themify-icons.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\background\error-bg.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\custom-select.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\eliteadmin-logo.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\eliteadmin-small-text.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\favicon.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\logo-icon.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\logo-light-icon.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\logo-light-text-old.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\logo-light-text.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\logo-text.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\LOGO.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\LogoCirc.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\LogoNTEI.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\1.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\2.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\3.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\4.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\5.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\6.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\7.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\images\users\8.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\alert.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\button.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\carousel.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\collapse.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\dropdown.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\index.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\modal.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\popover.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\scrollspy.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\tab.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\tooltip.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\util.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\alert.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\button.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\carousel.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\collapse.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\dropdown.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\index.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\modal.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\popover.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\scrollspy.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\tab.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\tooltip.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\src\util.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\c3.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\c3.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\c3.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\c3.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\chart-bubble\bubble.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\chart-bubble\c3.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\chart-bubble\c3.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\chart-bubble\index.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\exporter\phantom-exporter.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\exporter\test.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\js\c3ext.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\css\bootstrap.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\css\c3.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\css\index.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\css\style.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\index.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\c3.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\c3.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\require.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\samples\plugin.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\samples\requirejs.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\samples\zoom_reduction.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_axis_label.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_axis_range.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_category.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_data_colors.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_flow.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_flow_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_legend.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_tooltip_show.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_transform.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_xgrid_lines.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\api_ygrid_lines.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\area_zerobased.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_padding.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_range.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_extent.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_localtime.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_range_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_tick_culling.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_tick_fit.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_tick_rotate.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_x_tick_values.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_y2.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\axes_y_default.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\bar_zerobased.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\bindto.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\categorized.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area_spline.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area_spline_stacked.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area_stacked.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area_step.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_area_step_stacked.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_bar.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_bar_space.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_bar_stacked.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_combination.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_donut.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_gauge.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_pie.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_pie_sort.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_scatter.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_spline.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_step.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\chart_step_category.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\custom_xs_scale.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\custom_x_categorized.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\custom_x_scale.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_columned.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_hide.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_json.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_label.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_label_format.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_load.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_load_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_region.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_region_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_rowed.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\data_url.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\different_category_datasets.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\domain_y.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\element.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\emptydata.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\grids.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\grids_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\grid_focus.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\grid_x_lines.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\grid_x_lines_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\interaction_enabled.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\legend.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\padding.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\padding_update.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\plugin.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\point_r.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\point_show.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\regions.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\regions_timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\requirejs.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\selection.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\simple.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\subchart.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\subchart_onbrush.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\timeseries.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\timeseries_date.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\timeseries_descendent.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\timeseries_raw.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\tooltip_grouped.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\tooltip_show.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\zoom.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\zoom_category.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\zoom_onzoom.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\samples\zoom_reduction.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\karma.conf.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\rollup.config.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.axis-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.data-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.focus-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.grid-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.load-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.region-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\api.zoom-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\arc-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\axis-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\c3-helper.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\c3-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\class-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\core-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\data-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\data.convert.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\domain-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\grid-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\interaction-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\legend-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\shape.bar-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\shape.line-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\svg-helper.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\title-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\tooltip-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\type-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\spec\zoom-spec.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.axis.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.category.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.chart.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.color.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.data.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.flow.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.focus.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.grid.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.group.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.legend.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.load.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.region.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.selection.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.show.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.tooltip.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.transform.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.x.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\api.zoom.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\arc.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\axis.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\cache.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\category.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\class-utils.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\class.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\clip.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\color.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\config.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\core.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\data.convert.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\data.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\data.load.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\domain.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\drag.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\format.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\grid.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\index.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\interaction.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\legend.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\polyfill.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\region.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scale.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\selection.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\shape.bar.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\shape.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\shape.line.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\size.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\subchart.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\text.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\title.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\tooltip.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\type.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\ua.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\util.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\zoom.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\d3.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\d3.min-v4.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\d3.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\gmaps.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\gmaps.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\jquery.gmaps.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.controls.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.core.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.events.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.geofences.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.geometry.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.layers.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.map_types.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.markers.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.native_extensions.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.overlays.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.routes.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.static.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.streetview.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.styles.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\lib\gmaps.utils.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\jquery-sparkline\jquery.charts-sparkline.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\jquery\jquery-3.2.1.min - Copy.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\jquery\jquery-3.2.1.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\jquery\jquery-3.2.1.slim.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\area-as-line.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\area.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\bar-colors.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\bar-no-axes.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\bar.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\days.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\decimal-custom-hover.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\diagonal-xlabels-bar.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\diagonal-xlabels.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\donut-colors.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\donut-formatter.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\donut.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\dst.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\events.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\goals.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\lib\example.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\lib\example.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\months-no-smooth.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\negative.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\no-grid.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\non-continuous.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\non-date.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\quarters.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\resize.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\stacked_bars.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\timestamps.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\updating.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\weeks.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\years.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\examples\_template.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\Gruntfile.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\morris.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\morris.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\morris.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\specs.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\examples.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\exemplary\area0.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\exemplary\bar0.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\exemplary\line0.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\exemplary\stacked_bar0.png" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\test.html" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\visual_specs.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\js\perfect-scrollbar.jquery.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\js\perfect-scrollbar.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\perfect-scrollbar\js\perfect-scrollbar.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\popper\popper.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\dev\amdDev.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\dev\index.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\dev\require.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\license.txt" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\raphael-min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\raphael.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sparkline\jquery.charts-sparkline-old.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sparkline\jquery.charts-sparkline.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sparkline\jquery.sparkline.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sticky-kit-master\dist\sticky-kit.js" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\sticky-kit-master\dist\sticky-kit.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\Avisos.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Config.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\breadcrumb-page.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\dashboard1.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\error-pages.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\google-vector-map.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\icon-page.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\other-pages.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\pages\widget-page.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\style.css" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\custom.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\custom.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\dashboard1.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\sidebarmenu.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\js\waves.js" />
+    <Content Include="UI\elegant-admin-lite-master\html\Eventos.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Home.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\1.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\2.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\3.jpg" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\518001.png" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\atleta.png" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\LOGO.png" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\LogoCirc.png" />
+    <Content Include="UI\elegant-admin-lite-master\html\IMG\professor.png" />
+    <Content Include="UI\elegant-admin-lite-master\html\Index.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Localizacao.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Modalidades.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Predict.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Registro.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\RegistroAtleta.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\RegistroProfessor.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\RegistroTorcedor.aspx" />
+    <Content Include="UI\elegant-admin-lite-master\html\Sobre.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Atleta.cs" />
+    <Compile Include="BLL\Eventos.cs" />
+    <Compile Include="BLL\Predict.cs" />
+    <Compile Include="BLL\Professor.cs" />
+    <Compile Include="BLL\Torcedor.cs" />
+    <Compile Include="DAL\AtletaDAL.cs" />
+    <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="DAL\ProfessorDAL.cs" />
+    <Compile Include="DAL\TorcedorDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\elegant-admin-lite-master\html\Avisos.aspx.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Avisos.aspx.designer.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx.cs">
+      <DependentUpon>Chaveamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Chaveamento.aspx.designer.cs">
+      <DependentUpon>Chaveamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Eventos.aspx.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Eventos.aspx.designer.cs">
+      <DependentUpon>Eventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Localizacao.aspx.cs">
+      <DependentUpon>Localizacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Localizacao.aspx.designer.cs">
+      <DependentUpon>Localizacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Modalidades.aspx.cs">
+      <DependentUpon>Modalidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Modalidades.aspx.designer.cs">
+      <DependentUpon>Modalidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Predict.aspx.cs">
+      <DependentUpon>Predict.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Predict.aspx.designer.cs">
+      <DependentUpon>Predict.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroAtleta.aspx.cs">
+      <DependentUpon>RegistroAtleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroAtleta.aspx.designer.cs">
+      <DependentUpon>RegistroAtleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroProfessor.aspx.cs">
+      <DependentUpon>RegistroProfessor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroProfessor.aspx.designer.cs">
+      <DependentUpon>RegistroProfessor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroTorcedor.aspx.cs">
+      <DependentUpon>RegistroTorcedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\RegistroTorcedor.aspx.designer.cs">
+      <DependentUpon>RegistroTorcedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Sobre.aspx.cs">
+      <DependentUpon>Sobre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\elegant-admin-lite-master\html\Sobre.aspx.designer.cs">
+      <DependentUpon>Sobre.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\animated.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\core.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\icons.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\larger.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\list.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\mixins.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\path.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\screen-reader.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\stacked.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\less\variables.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\.bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\.gitignore" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\.npmignore" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont.eot" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont.woff" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\fontawesome-webfont.woff2" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\fonts\FontAwesome.otf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\animated.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\bordered-pulled.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\core.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\extras.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\fixed-width.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\font-awesome.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\icons.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\larger.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\list.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\mixins.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\path.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\rotated-flipped.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\spinning.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\stacked.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\less\variables.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\font-awesome.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_animated.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_bordered-pulled.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_core.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_extras.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_fixed-width.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_icons.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_larger.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_list.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_mixins.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_path.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_rotated-flipped.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_spinning.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_stacked.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\old\scss\_variables.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_core.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_list.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_path.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="UI\elegant-admin-lite-master\assets\icons\themify-icons\themify-icons.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\alert.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\button.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\carousel.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\collapse.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\dropdown.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\index.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\modal.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\popover.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\scrollspy.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\tab.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\tooltip.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\js\dist\util.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\LICENSE" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\package.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\README.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\bootstrap.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_navbar-align.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_alert.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_badge.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_button-group.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_buttons.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_card.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_carousel.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_close.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_code.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_dropdown.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_forms.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_functions.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_grid.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_images.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_input-group.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_list-group.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_media.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_mixins.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_modal.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_nav.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_navbar.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_pagination.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_popover.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_print.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_progress.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_reboot.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_root.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_tables.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_tooltip.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_transitions.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_type.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_utilities.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\bootstrap\scss\_variables.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.bmp.yml" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.circleci\config.yml" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.editorconfig" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.gitignore" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.jshintrc" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\.travis.yml" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\codecov.yml" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\component.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\CONTRIBUTING.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\extensions\exporter\config.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test.csv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test.tsv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test2.csv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test2_ts.csv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test3.csv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test_2.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test_3.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\data\c3_test_ts.csv" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\htdocs\js\extensions" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\LICENSE" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\package-lock.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\package.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\README.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\arc.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\area.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\axis.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\bar.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\brush.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\chart.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\focus.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\grid.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\legend.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\line.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\main.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\point.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\region.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\select_drag.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\text.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\title.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\c3-master\src\scss\tooltip.scss" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\API.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\CHANGES.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\LICENSE" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\d3\README.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\gmaps\gmaps.min.js.map" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\.bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\.gitignore" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\.travis.yml" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\bower.travis.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\less\morris.core.less" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.area.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.bar.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.donut.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.grid.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.hover.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\lib\morris.line.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\package.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\README.md" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\area\area_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\bar\bar_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\bar\colours.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\commas_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\donut\donut_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\grid\auto_grid_lines_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\grid\set_data_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\grid\y_label_format_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\hover_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\label_series_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\line\line_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\pad_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\lib\parse_time_spec.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\support\placeholder.coffee" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\morrisjs\spec\viz\run.sh" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\.bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\node_modules\raphael\bower.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\package.json" />
+    <Content Include="UI\elegant-admin-lite-master\assets\README.md" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\icomoon.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\css\fonts\themify.ttf" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\colors\default-dark.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\animation.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\app.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\buttons.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\core.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\form-pages.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\header.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\other-common.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\perfect-scrollbar.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\scafholding.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\sidebar.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\spinner.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\table-pages.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\core\theme-settings.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\custom.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\breadcrumb-page.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\dashboard1.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\error-pages.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\google-vector-map.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\icon-page.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\other-pages.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\pages\widget-page.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\prepros-6.config" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\responsive.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\style.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\variable.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\common-widget.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\feed.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\msg-box.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\profile.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\steamline.scss" />
+    <Content Include="UI\elegant-admin-lite-master\html\dist\scss\widgets\widgets.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7106</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7106/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
